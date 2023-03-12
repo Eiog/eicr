@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 import path from 'node:path'
+import https from 'node:https'
 import chalk from 'chalk'
 import { Command } from 'commander'
 import fs from 'fs-extra'
@@ -9,6 +10,19 @@ import ora from 'ora'
 import store from '../store.json'
 import pkg from '../package.json'
 const storeUri = 'https://raw.githubusercontent.com/Eiog/eicr/main/store.json'
+const fetchStore = (url: string) => {
+  return new Promise((resolve, reject) => {
+    https.request({ method: 'GET', hostname: 'https://raw.githubusercontent.com', path: '/Eiog/eicr/main/store.json', port: 443 }, (res) => {
+      res.on('data', (data) => {
+        console.log(data)
+      })
+      res.on('error', (err) => {
+        console.log(error)
+      })
+    }).end()
+  })
+}
+fetchStore(storeUri)
 
 const create = async (name: string, options: any) => {
   // 1.获取当前位置（当前输入命令行的位置）
