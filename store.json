@@ -1,0 +1,10 @@
+[
+    {
+        "name": "vue3-starter",
+        "git": "github:Eiog/vue3-starter"
+    },
+    {
+        "name": "nuxt3-starter",
+        "git": "github:Eiog/nuxt3-starter"
+    }
+]
