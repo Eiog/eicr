@@ -26,6 +26,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "eicr": "./dist/index.js"
+  },
   "files": [
     "dist",
     "package.json",
@@ -41,7 +44,8 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "update-deps": "taze -w && pnpm i",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "eicr": "eicr"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
@@ -61,7 +65,6 @@
     "extends": "@antfu"
   },
   "dependencies": {
-    "axios": "^1.3.4",
     "chalk": "^5.2.0",
     "clear-console": "^1.1.0",
     "commander": "^10.0.0",

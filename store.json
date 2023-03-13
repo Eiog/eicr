@@ -1,10 +1,70 @@
 [
     {
-        "name": "vue3-starter",
-        "git": "github:Eiog/vue3-starter"
+        "name": "admin-simple-starter",
+        "git": "github:Eiog/admin-simple-starter"
+    },
+    {
+        "name": "astro-starter",
+        "git": "github:Eiog/astro-starter"
+    },
+    {
+        "name": "electron-starter",
+        "git": "github:Eiog/electron-starter"
+    },
+    {
+        "name": "express-starter",
+        "git": "github:Eiog/express-starter"
+    },
+    {
+        "name": "h3-starter",
+        "git": "github:Eiog/h3-starter"
+    },
+    {
+        "name": "nitro-starter",
+        "git": "github:Eiog/nitro-starter"
     },
     {
         "name": "nuxt3-starter",
         "git": "github:Eiog/nuxt3-starter"
+    },
+    {
+        "name": "taro-nutui-starter",
+        "git": "github:Eiog/taro-nutui-starter"
+    },
+    {
+        "name": "tauri-starter",
+        "git": "github:Eiog/tauri-starter"
+    },
+    {
+        "name": "tsup-starter",
+        "git": "github:Eiog/tsup-starter"
+    },
+    {
+        "name": "uniApp-starter",
+        "git": "github:Eiog/uniApp-starter"
+    },
+    {
+        "name": "unplugin-starter",
+        "git": "github:Eiog/unplugin-starter"
+    },
+    {
+        "name": "vanilla-ts-starter",
+        "git": "github:Eiog/vanilla-ts-starter"
+    },
+    {
+        "name": "vite-vue-expres-starter",
+        "git": "github:Eiog/vite-vue-expres-starter"
+    },
+    {
+        "name": "vitepress-starter",
+        "git": "github:Eiog/vitepress-starter"
+    },
+    {
+        "name": "vue-component-starter",
+        "git": "github:Eiog/vue-component-starter"
+    },
+    {
+        "name": "vue3-starter",
+        "git": "github:Eiog/vue3-starter"
     }
 ]

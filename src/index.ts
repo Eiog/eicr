@@ -1,16 +1,37 @@
 #! /usr/bin/env node
 import path from 'node:path'
+import { request } from 'node:https'
 import chalk from 'chalk'
 import { Command } from 'commander'
 import fs from 'fs-extra'
 import inquirer from 'inquirer'
 import download from 'download-git-repo'
 import ora from 'ora'
-import store from '../store.json'
+import _store from '../store.json'
 import pkg from '../package.json'
-const storeUri = 'https://raw.githubusercontent.com/Eiog/eicr/main/store.json'
-
+const storeUri = 'https://index-eicr-store-rymxdcfbik.cn-beijing.fcapp.run'
+const getStore = (src: string) => {
+  return new Promise<typeof _store>((resolve, reject) => {
+    request(src, (res) => {
+      let data = ''
+      res.on('data', (d: string) => {
+        data += d.toString()
+      })
+      res.on('end', () => {
+        return resolve(JSON.parse(data))
+      })
+      res.on('error', (e) => {
+        return reject(e)
+      })
+    }).end()
+  })
+}
 const create = async (name: string, options: any) => {
+  let store = _store
+  const result = await getStore(storeUri)
+  if (result)
+    store = result
+
   // 1.获取当前位置（当前输入命令行的位置）
   const cwd = process.cwd()
 
@@ -74,7 +95,7 @@ const program = new Command()
 
 // 创建文件命令
 program
-  .command('<project-name>')
+  .command(' <project-name>')
   .description('创建一个新项目~🤪')
   .option('-f --force', '强制覆盖同名目录~😌')
   .action((name: string, options: any) => {
@@ -87,7 +108,7 @@ program.version(pkg.version).usage('<command> [option]')
 // 配置帮助信息
 program.on('--help', () => {
   console.log(
-    `\r\n Run ${chalk.green('antrioe <command> --help')} 查看帮助 \r\n `,
+    `\r\n Run ${chalk.green('<command> --help')} 查看帮助 \r\n `,
   )
 })
 
