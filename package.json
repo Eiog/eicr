@@ -1,5 +1,5 @@
 {
-  "name": "eicr",
+  "name": "@eiog/eicr",
   "type": "module",
   "version": "0.0.1-beta.1",
   "packageManager": "pnpm@7.18.0",
