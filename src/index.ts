@@ -28,9 +28,16 @@ const getStore = (src: string) => {
 }
 const create = async (name: string, options: any) => {
   let store = _store
-  const result = await getStore(storeUri)
-  if (result)
-    store = result
+  const downloadLoading = ora('正在或获取最新列表')
+  try {
+    downloadLoading.start()
+    const result = await getStore(storeUri)
+    downloadLoading.succeed('获取成功')
+    if (result)
+      store = result
+  } catch (error) {
+    downloadLoading.fail('获取失败')
+  }
 
   // 1.获取当前位置（当前输入命令行的位置）
   const cwd = process.cwd()
