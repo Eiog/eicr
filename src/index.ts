@@ -35,7 +35,8 @@ const create = async (name: string, options: any) => {
     downloadLoading.succeed('获取成功')
     if (result)
       store = result
-  } catch (error) {
+  }
+  catch (error) {
     downloadLoading.fail('获取失败')
   }
 
@@ -85,7 +86,6 @@ const create = async (name: string, options: any) => {
   const spinner = ora('正在下载~')
   spinner.start()
   download(projectName, name, (err: any) => {
-    console.log(err)
     if (err) {
       console.log(chalk.red('下载失败了~😧'))
       spinner.fail('下载失败了~😧')
@@ -100,24 +100,15 @@ const create = async (name: string, options: any) => {
 }
 const program = new Command()
 
-// 创建文件命令
 program
-  .command(' <project-name>')
-  .description('创建一个新项目~🤪')
+  .name(pkg.name)
+  .description(pkg.description)
+  .version(pkg.version, '-v --version', '版本信息')
+  .argument('<name>', '项目名称')
   .option('-f --force', '强制覆盖同名目录~😌')
-  .action((name: string, options: any) => {
+  .action((name: string, options: any, command: Object) => {
     create(name, options)
   })
-
-// 配置版本号信息
-program.version(pkg.version).usage('<command> [option]')
-
-// 配置帮助信息
-program.on('--help', () => {
-  console.log(
-    `\r\n Run ${chalk.green('<command> --help')} 查看帮助 \r\n `,
-  )
-})
 
 // 解析参数
 program.parse(process.argv)

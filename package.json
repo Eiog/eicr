@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1-beta.1",
   "packageManager": "pnpm@7.18.0",
-  "description": "",
+  "description": "Eicr-多项目快速开始模板 by<https://github.com/Eiog>",
   "author": "Eiog",
   "license": "MIT",
   "homepage": "https://github.com/Eiog/eicr",

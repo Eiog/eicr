@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": false, // 保存代码时自动格式化
+  "prettier.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
