@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.36.0
+      '@antfu/ni': ^0.20.0
       '@types/fs-extra': ^11.0.1
       '@types/inquirer': ^9.0.3
       '@types/node': ^18.15.0
@@ -35,6 +36,7 @@ importers:
       shelljs: registry.npmmirror.com/shelljs/0.8.5
     devDependencies:
       '@antfu/eslint-config': registry.npmmirror.com/@antfu/eslint-config/0.36.0_vgl77cfdswitgr47lm5swmv43m
+      '@antfu/ni': registry.npmmirror.com/@antfu/ni/0.20.0
       '@types/fs-extra': registry.npmmirror.com/@types/fs-extra/11.0.1
       '@types/inquirer': registry.npmmirror.com/@types/inquirer/9.0.3
       '@types/node': registry.npmmirror.com/@types/node/18.15.0
