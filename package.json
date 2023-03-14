@@ -44,8 +44,7 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "update-deps": "taze -w && pnpm i",
-    "typecheck": "tsc --noEmit",
-    "eicr": "eicr"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
