@@ -1,7 +1,7 @@
 {
   "name": "eicr",
   "type": "module",
-  "version": "0.0.1-beta.1",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.18.0",
   "description": "Eicr-多项目快速开始模板 by<https://github.com/Eiog>",
   "author": "Eiog",
