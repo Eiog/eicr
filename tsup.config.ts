@@ -6,5 +6,5 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   external: [],
   dts: false,
-  minify: true,
+  minify: false,
 })

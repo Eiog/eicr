@@ -1,6 +1,8 @@
 #! /usr/bin/env node
+/* eslint-disable no-console */
 import path from 'node:path'
 import { request } from 'node:https'
+
 import chalk from 'chalk'
 import { Command } from 'commander'
 import fs from 'fs-extra'
@@ -9,8 +11,9 @@ import download from 'download-git-repo'
 import ora from 'ora'
 import _store from '../store.json'
 import pkg from '../package.json'
-const storeUri = 'https://index-eicr-store-rymxdcfbik.cn-beijing.fcapp.run'
-const getStore = (src: string) => {
+
+const storeUri = 'https://cdn.jsdelivr.net/gh/eiog/eicr@main/store.json'
+function getStore(src: string) {
   return new Promise<typeof _store>((resolve, reject) => {
     request(src, (res) => {
       let data = ''
@@ -26,7 +29,7 @@ const getStore = (src: string) => {
     }).end()
   })
 }
-const create = async (name: string, options: any) => {
+async function create(name: string, options: any) {
   let store = _store
   const downloadLoading = ora('正在或获取最新列表~')
   try {
@@ -105,6 +108,7 @@ program
   .description(pkg.description)
   .version(pkg.version, '-v --version', '🎈版本信息~')
   .helpOption('-h --help', '❓帮助信息~')
+  .command('create')
   .argument('<name>', '✨ 项目名称~')
   .option('-f --force', '🕹️强制覆盖同名目录~')
   .action((name: string, options: any) => {
