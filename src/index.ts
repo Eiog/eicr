@@ -2,11 +2,12 @@
 /* eslint-disable no-console */
 import path from 'node:path'
 import { request } from 'node:https'
-
+import process from 'node:process'
 import chalk from 'chalk'
 import { Command } from 'commander'
 import fs from 'fs-extra'
-import inquirer from 'inquirer'
+import { select } from '@inquirer/prompts'
+
 import download from 'download-git-repo'
 import ora from 'ora'
 import _store from '../store.json'
@@ -39,7 +40,7 @@ async function create(name: string, options: any) {
     if (result)
       store = result
   }
-  catch (error) {
+  catch {
     downloadLoading.fail('❌获取失败，将展示默认列表~')
   }
 
@@ -50,9 +51,7 @@ async function create(name: string, options: any) {
   const targetPath = path.join(cwd, name)
 
   // 3.通过交互式命令行，选择我们要创建的模版
-  const { projectName } = await inquirer.prompt({
-    name: 'projectName',
-    type: 'list',
+  const projectName = await select({
     choices: store,
     message: '🎯请选择一个项目模版进行创建~',
   })
@@ -65,19 +64,17 @@ async function create(name: string, options: any) {
     }
     else {
       // 如果存在，则通过交互式命令询问是否覆盖项目
-      const { replace } = await inquirer.prompt([
+      const replace = await select(
         {
-          name: 'replace',
-          type: 'list',
           message: `💢项目已存在、是否确认覆盖? ${chalk.grey(
-              '覆盖后原项目无法恢复',
-            )}`,
+            '覆盖后原项目无法恢复',
+          )}`,
           choices: [
             { name: '⭕确认覆盖~', value: true },
             { name: '❌再考虑下，暂不覆盖~', value: false },
           ],
         },
-      ])
+      )
       if (!replace)
         return
 

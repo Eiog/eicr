@@ -11,7 +11,7 @@ eicr create <projectName>
 ```
 ## Options
 ```bash
-eicr create <projectName> 
+eicr create <projectName>
 
 eicr -v --version   🎈版本信息~
 eicr -f --force     🕹️强制覆盖同名目录~

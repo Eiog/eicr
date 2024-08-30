@@ -1,86 +1,46 @@
 [
   {
-    "name": "typescript-library-starter",
-    "value": "github:Eiog/typescript-library-starter"
+    "name": "vue3-starter-simple",
+    "value": "github:Eiog/vue3-starter-simple"
   },
   {
-    "name": "nitro-starter",
-    "value": "github:Eiog/nitro-starter"
+    "name": "admin-starter",
+    "value": "github:Eiog/admin-starter"
   },
   {
-    "name": "vue3-starter",
-    "value": "github:Eiog/vue3-starter"
+    "name": "node-cli-starter",
+    "value": "github:Eiog/node-cli-starter"
   },
   {
-    "name": "nuxt3-starter",
-    "value": "github:Eiog/nuxt3-starter"
-  },
-  {
-    "name": "vanilla-ts-starter",
-    "value": "github:Eiog/vanilla-ts-starter"
-  },
-  {
-    "name": "vue-component-starter",
-    "value": "github:Eiog/vue-component-starter"
-  },
-  {
-    "name": "node-interactive-starter",
-    "value": "github:Eiog/node-interactive-starter"
+    "name": "typescript-starter",
+    "value": "github:Eiog/typescript-starter"
   },
   {
     "name": "node-server-starter",
     "value": "github:Eiog/node-server-starter"
   },
   {
-    "name": "webext-starter",
-    "value": "github:Eiog/webext-starter"
-  },
-  {
-    "name": "react-starter",
-    "value": "github:Eiog/react-starter"
-  },
-  {
-    "name": "monorepo-starter",
-    "value": "github:Eiog/monorepo-starter"
-  },
-  {
-    "name": "solid-js-starter",
-    "value": "github:Eiog/solid-js-starter"
-  },
-  {
-    "name": "admin-simple-starter",
-    "value": "github:Eiog/admin-simple-starter"
-  },
-  {
-    "name": "unplugin-starter",
-    "value": "github:Eiog/unplugin-starter"
+    "name": "nitro-starter",
+    "value": "github:Eiog/nitro-starter"
   },
   {
     "name": "uni-app-starter",
     "value": "github:Eiog/uni-app-starter"
   },
   {
-    "name": "astro-starter",
-    "value": "github:Eiog/astro-starter"
+    "name": "nuxt3-starter",
+    "value": "github:Eiog/nuxt3-starter"
   },
   {
     "name": "vitepress-starter",
     "value": "github:Eiog/vitepress-starter"
   },
   {
-    "name": "starter-vscode",
-    "value": "github:Eiog/starter-vscode"
+    "name": "vue-component-starter",
+    "value": "github:Eiog/vue-component-starter"
   },
   {
-    "name": "next-starter",
-    "value": "github:Eiog/next-starter"
-  },
-  {
-    "name": "express-api-starter",
-    "value": "github:Eiog/express-api-starter"
-  },
-  {
-    "name": "taro-nutui-starter",
-    "value": "github:Eiog/taro-nutui-starter"
+    "name": "astro-starter",
+    "value": "github:Eiog/astro-starter"
   }
 ]
